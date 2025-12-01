@@ -128,7 +128,7 @@
         /* Скроллбар */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #2c2c2c; }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(var(--imperial-red), var(--roman-gold)); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(var(--imperial-red), var(--roman-gold)); border-radius: 5px; }       
         /* Цитаты (Стиль свитка) */
         .quote-box {
             position: relative;
@@ -140,7 +140,7 @@
             max-width: 850px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
+        }    
         /* Декоративные элементы цитаты */
         .quote-box::before, .quote-box::after {
             content: "❖";
@@ -193,7 +193,7 @@
             display: inline-block;
             transition: transform 0.3s;
         }
-        .emoji-logo:hover { transform: scale(1.1); }     
+        .emoji-logo:hover { transform: scale(1.1); }
         .sidebar-logo-text {
             font-family: 'Cinzel', serif;
             font-weight: 900;
@@ -234,13 +234,13 @@
         </div>
     </aside>
     <!-- Основной контент -->
-    <main class="flex-1 overflow-y-auto h-screen scroll-smooth relative">   
+    <main class="flex-1 overflow-y-auto h-screen scroll-smooth relative">
         <!-- Герой-блок -->
-        <header id="intro" class="min-h-[60vh] flex flex-col justify-center items-center p-8 text-center">   
+        <header id="intro" class="min-h-[60vh] flex flex-col justify-center items-center p-8 text-center">      
             <!-- Заголовок с венками (Размер оптимизирован) -->
             <div class="relative mb-6">
                 <i class="fas fa-leaf text-5xl md:text-6xl text-[#3a5f0b] absolute -left-12 md:-left-16 top-1/2 transform -translate-y-1/2 -rotate-45 opacity-90 drop-shadow-md"></i>
-                <i class="fas fa-leaf text-5xl md:text-6xl text-[#3a5f0b] absolute -right-12 md:-right-16 top-1/2 transform -translate-y-1/2 rotate-45 opacity-90 drop-shadow-md"></i>      
+                <i class="fas fa-leaf text-5xl md:text-6xl text-[#3a5f0b] absolute -right-12 md:-right-16 top-1/2 transform -translate-y-1/2 rotate-45 opacity-90 drop-shadow-md"></i>     
                 <h1 class="text-4xl md:text-6xl font-black text-[#750000] drop-shadow-lg roman-font leading-tight bg-white/80 px-6 py-4 rounded shadow-xl border-4 double border-[#d4af37]">
                     РИМСКОЕ<br>ПРАВО
                 </h1>
@@ -697,7 +697,7 @@
                 <div class="text-center mb-8 pt-8 border-t-2 border-[#c5a017]">
                     <h2 class="text-3xl font-bold text-[#750000] roman-font">REGULAE IURIS</h2>
                     <p class="text-gray-500 italic">Основные принципы права</p>
-                </div> 
+                </div>            
                 <div class="grid md:grid-cols-2 gap-4">
                     <div class="principle-card">
                         <span class="latin-term">Dura lex, sed lex</span>
@@ -730,7 +730,7 @@
         <footer class="bg-[#1a1a1a] text-[#8b6c42] py-10 text-center border-t-8 border-[#8b6c42] mt-12">
             <div class="container mx-auto px-4">
                 <i class="fas fa-columns text-4xl mb-4 text-[#d4af37]"></i>
-                <p class="font-bold text-xl roman-font mb-2 text-[#d4af37]">DURA LEX SED LEX</p>
+                <p class="font-bold text-xl roman-font mb-2 text-[#d4af37]">DURA LEX SED LEX</p>      
                 <div class="border-t border-[#3d3d3d] pt-6 mt-6 max-w-2xl mx-auto">
                     <p class="text-xs text-gray-500 mb-2">На основе учебного пособия: Бортенев А.И., Сергачева О.А., Коваленко Е.Н. (2017)</p>
                     <div class="inline-block border border-[#8b6c42] px-6 py-3 rounded mt-2 bg-[#2b2b2b]">
