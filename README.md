@@ -15,7 +15,6 @@
             --laurel-green: #3a5f0b; /* Зеленый для венков */
             --marble-bg: #f9f7f2;
         }
-
         body {
             font-family: 'Noto Serif', serif;
             background-color: #e6e2d3;
@@ -28,23 +27,19 @@
             background-attachment: fixed;
             background-position: center;
         }
-
         h1, h2, h3, h4, .roman-font {
             font-family: 'Cinzel', serif;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-
         /* Сайдбар */
         .sidebar-gradient {
             background: linear-gradient(180deg, var(--imperial-red) 0%, #4a0000 100%);
             border-right: 4px solid var(--roman-gold);
         }
-
         /* Золотые элементы */
         .text-gold { color: var(--roman-gold); }
         .border-gold { border-color: var(--roman-gold); }
-        
         .gold-box {
             border: 2px solid var(--roman-gold);
             background: #fff;
@@ -58,7 +53,6 @@
             border: 1px solid #e5d39e;
             pointer-events: none;
         }
-
         /* Таблицы */
         .roman-table {
             width: 100%;
@@ -81,7 +75,6 @@
         .roman-table tr:nth-child(even) td {
             background-color: #faf7f0;
         }
-
         /* Аккордеон */
         .accordion-btn {
             width: 100%;
@@ -110,7 +103,6 @@
         .accordion-content.open { max-height: 4000px; }
         .icon-rotate { transition: transform 0.3s; }
         .accordion-btn.active .icon-rotate { transform: rotate(180deg); }
-
         /* Схемы */
         .diagram-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 1.5rem 0; }
         .diagram-node {
@@ -123,7 +115,6 @@
             min-width: 200px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-
         /* Принципы */
         .principle-card {
             background: #fff;
@@ -134,12 +125,10 @@
         }
         .latin-term { font-weight: bold; color: var(--imperial-red); font-size: 1.1rem; display: block; margin-bottom: 0.2rem; }
         .rus-def { font-style: italic; color: #444; }
-
         /* Скроллбар */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #2c2c2c; }
         ::-webkit-scrollbar-thumb { background: linear-gradient(var(--imperial-red), var(--roman-gold)); border-radius: 5px; }
-        
         /* Цитаты (Стиль свитка) */
         .quote-box {
             position: relative;
@@ -152,7 +141,6 @@
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        
         /* Декоративные элементы цитаты */
         .quote-box::before, .quote-box::after {
             content: "❖";
@@ -164,7 +152,6 @@
         }
         .quote-box::before { top: -14px; background: #e6e2d3; padding: 0 10px; }
         .quote-box::after { bottom: -14px; background: #e6e2d3; padding: 0 10px; }
-
         .quote-latin {
             font-family: 'Cinzel', serif;
             font-size: 1.3rem;
@@ -191,7 +178,6 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
-
         /* Стиль для логотипа в сайдбаре */
         .sidebar-logo-container {
             position: relative;
@@ -207,8 +193,7 @@
             display: inline-block;
             transition: transform 0.3s;
         }
-        .emoji-logo:hover { transform: scale(1.1); }
-        
+        .emoji-logo:hover { transform: scale(1.1); }     
         .sidebar-logo-text {
             font-family: 'Cinzel', serif;
             font-weight: 900;
@@ -223,7 +208,6 @@
     </style>
 </head>
 <body class="flex flex-col md:flex-row min-h-screen">
-
     <!-- Сайдбар (Красный с золотом) -->
     <aside class="w-full md:w-72 sidebar-gradient text-[#f3e5ab] flex-shrink-0 flex flex-col shadow-2xl z-50">
         <div class="sidebar-logo-container">
@@ -249,27 +233,21 @@
             Мазанов Т.О. © 2025
         </div>
     </aside>
-
     <!-- Основной контент -->
-    <main class="flex-1 overflow-y-auto h-screen scroll-smooth relative">
-        
+    <main class="flex-1 overflow-y-auto h-screen scroll-smooth relative">   
         <!-- Герой-блок -->
-        <header id="intro" class="min-h-[60vh] flex flex-col justify-center items-center p-8 text-center">
-            
+        <header id="intro" class="min-h-[60vh] flex flex-col justify-center items-center p-8 text-center">   
             <!-- Заголовок с венками (Размер оптимизирован) -->
             <div class="relative mb-6">
                 <i class="fas fa-leaf text-5xl md:text-6xl text-[#3a5f0b] absolute -left-12 md:-left-16 top-1/2 transform -translate-y-1/2 -rotate-45 opacity-90 drop-shadow-md"></i>
-                <i class="fas fa-leaf text-5xl md:text-6xl text-[#3a5f0b] absolute -right-12 md:-right-16 top-1/2 transform -translate-y-1/2 rotate-45 opacity-90 drop-shadow-md"></i>
-                
+                <i class="fas fa-leaf text-5xl md:text-6xl text-[#3a5f0b] absolute -right-12 md:-right-16 top-1/2 transform -translate-y-1/2 rotate-45 opacity-90 drop-shadow-md"></i>      
                 <h1 class="text-4xl md:text-6xl font-black text-[#750000] drop-shadow-lg roman-font leading-tight bg-white/80 px-6 py-4 rounded shadow-xl border-4 double border-[#d4af37]">
                     РИМСКОЕ<br>ПРАВО
                 </h1>
             </div>
-
             <h2 class="text-lg md:text-xl font-bold uppercase tracking-widest text-[#fff] bg-[#750000] px-6 py-2 rounded shadow-lg border border-[#d4af37] mb-10">
                 Учебный курс в таблицах и схемах
             </h2>
-
             <!-- Цитата (Новый стиль) -->
             <div class="quote-box">
                 <p class="quote-latin">
@@ -285,16 +263,13 @@
                 </div>
             </div>
         </header>
-
         <div class="max-w-6xl mx-auto p-6 md:p-12 space-y-20 pb-32">
-
             <!-- ГЛАВА I -->
             <section id="chap1">
                 <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
                     <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">I</span>
                     <h2 class="text-3xl font-bold text-gray-900 roman-font">ИСТОЧНИКИ И СИСТЕМА</h2>
                 </div>
-
                 <div class="gold-box p-6 mb-8">
                     <h3 class="text-xl font-bold text-[#750000] mb-4 text-center">СИСТЕМЫ РИМСКОГО ПРАВА</h3>
                     <div class="grid md:grid-cols-3 gap-4 text-center">
@@ -315,7 +290,6 @@
                         </div>
                     </div>
                 </div>
-
                 <h3 class="text-lg font-bold mb-2 roman-font text-[#750000]">ЭВОЛЮЦИЯ ИСТОЧНИКОВ</h3>
                 <div class="overflow-x-auto shadow-lg">
                     <table class="roman-table">
@@ -346,14 +320,12 @@
                     </table>
                 </div>
             </section>
-
             <!-- ГЛАВА II -->
             <section id="chap2">
                 <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
                     <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">II</span>
                     <h2 class="text-3xl font-bold text-gray-900 roman-font">СУБЪЕКТЫ ПРАВА</h2>
                 </div>
-
                 <div class="mb-8">
                     <h3 class="text-center font-bold text-lg mb-4 text-[#750000]">ТРИ СТАТУСА ПРАВОСПОСОБНОСТИ (CAPUT)</h3>
                     <div class="diagram-container">
@@ -371,7 +343,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="gold-box p-6 mb-6">
                     <h4 class="font-bold text-[#750000] mb-2">ГРАЖДАНСТВО И МАНУМИССИЯ</h4>
                     <p class="text-sm mb-2"><strong>Манумиссия (Manumissio)</strong> — освобождение раба. Способы: <em>Vindicta</em> (палочкой), <em>Censu</em> (перепись), <em>Testamento</em> (завещание). Раб становился либертином.</p>
@@ -379,7 +350,6 @@
                         <strong class="text-[#750000]">212 г. н.э. Конституция Антонина (Каракаллы)</strong> — дарование римского гражданства всем свободным жителям Империи.
                     </p>
                 </div>
-
                 <h3 class="font-bold mb-2">Юридические лица (Universitas)</h3>
                 <ul class="list-disc list-inside bg-white p-4 rounded shadow">
                     <li><strong>Populus Romanus:</strong> Римское государство, казна.</li>
@@ -388,14 +358,12 @@
                     <li><strong>Piae causae:</strong> Благотворительные учреждения.</li>
                 </ul>
             </section>
-
             <!-- ГЛАВА III -->
             <section id="chap3">
                 <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
                     <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">III</span>
                     <h2 class="text-3xl font-bold text-gray-900 roman-font">СЕМЕЙНОЕ ПРАВО</h2>
                 </div>
-
                 <div class="grid md:grid-cols-2 gap-6 mb-8">
                     <div class="bg-white p-6 shadow-md border-t-4 border-[#750000]">
                         <h3 class="text-center font-bold text-xl mb-4 roman-font">ВЛАСТЬ ОТЦА (Pater Familias)</h3>
@@ -419,14 +387,12 @@
                     </div>
                 </div>
             </section>
-
             <!-- ГЛАВА IV -->
             <section id="chap4">
                 <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
                     <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">IV</span>
                     <h2 class="text-3xl font-bold text-gray-900 roman-font">ВЕЩНОЕ ПРАВО</h2>
                 </div>
-
                 <!-- Классификация вещей -->
                 <button class="accordion-btn" onclick="toggleAccordion(this)">
                     <span>СХЕМА: КЛАССИФИКАЦИЯ ВЕЩЕЙ (RES)</span>
@@ -459,7 +425,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Собственность и Владение -->
                 <div class="grid md:grid-cols-2 gap-8 mb-8">
                     <div class="gold-box p-6">
@@ -482,7 +447,6 @@
                         <div class="mt-4 text-sm font-bold text-[#750000]">Защита: Interdicta (Интердикты)</div>
                     </div>
                 </div>
-
                 <div class="overflow-x-auto shadow bg-white">
                     <table class="roman-table">
                         <tr>
@@ -508,14 +472,12 @@
                     </table>
                 </div>
             </section>
-
             <!-- ГЛАВА V: ОБЯЗАТЕЛЬСТВА -->
             <section id="chap5">
                 <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
                     <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">V</span>
                     <h2 class="text-3xl font-bold text-gray-900 roman-font">ОБЯЗАТЕЛЬСТВЕННОЕ ПРАВО</h2>
                 </div>
-
                 <!-- Цитата -->
                 <div class="quote-box mb-10">
                     <p class="quote-latin">
@@ -528,7 +490,6 @@
                         — Институции Юстиниана (Institutiones Iustiniani), 3.13.pr. —
                     </div>
                 </div>
-
                 <!-- 1. КОНТРАКТЫ -->
                 <button class="accordion-btn active" onclick="toggleAccordion(this)">
                     <span>1. СИСТЕМА КОНТРАКТОВ (Contractus)</span>
@@ -565,7 +526,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 2. ДЕЛИКТЫ -->
                 <button class="accordion-btn" onclick="toggleAccordion(this)">
                     <span>2. ДЕЛИКТЫ (Delicta Privata)</span>
@@ -589,7 +549,6 @@
                         </table>
                     </div>
                 </div>
-
                 <!-- 3. КВАЗИ И ПАКТЫ -->
                 <button class="accordion-btn" onclick="toggleAccordion(this)">
                     <span>3. ПАКТЫ И КВАЗИ-ОБЯЗАТЕЛЬСТВА</span>
@@ -605,14 +564,12 @@
                     </div>
                 </div>
             </section>
-
             <!-- ГЛАВА VI: НАСЛЕДСТВО -->
             <section id="chap6">
                 <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
                     <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">VI</span>
                     <h2 class="text-3xl font-bold text-gray-900 roman-font">НАСЛЕДСТВЕННОЕ ПРАВО</h2>
                 </div>
-
                 <div class="gold-box p-6 mb-8">
                     <h3 class="text-center font-bold text-lg mb-4 text-[#750000]">ЭВОЛЮЦИЯ ОЧЕРЕДЕЙ НАСЛЕДОВАНИЯ ПО ЗАКОНУ</h3>
                     <div class="grid md:grid-cols-3 gap-4 text-sm">
@@ -647,7 +604,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="bg-white p-6 shadow-md border-l-4 border-[#750000]">
                     <h4 class="font-bold text-[#750000] mb-2">Сингулярное преемство (Отказы)</h4>
                     <div class="grid md:grid-cols-2 gap-6 text-sm">
@@ -660,14 +616,12 @@
                     </div>
                 </div>
             </section>
-
             <!-- ГЛАВА VII: ПРОЦЕСС -->
             <section id="chap7">
                 <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
                     <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">VII</span>
                     <h2 class="text-3xl font-bold text-gray-900 roman-font">ГРАЖДАНСКИЙ ПРОЦЕСС</h2>
                 </div>
-
                 <!-- Легисакционный -->
                 <button class="accordion-btn" onclick="toggleAccordion(this)">
                     <span>1. ЛЕГИСАКЦИОННЫЙ ПРОЦЕСС (Legis Actiones)</span>
@@ -685,7 +639,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <!-- Формулярный -->
                 <button class="accordion-btn active" onclick="toggleAccordion(this)">
                     <span>2. ФОРМУЛЯРНЫЙ ПРОЦЕСС (Per Formulas)</span>
@@ -706,7 +659,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Экстраординарный -->
                 <button class="accordion-btn" onclick="toggleAccordion(this)">
                     <span>3. ЭКСТРАОРДИНАРНЫЙ (Cognitio Extra Ordinem)</span>
@@ -717,7 +669,6 @@
                         <p>Государственный процесс. Одна стадия. Судья — чиновник. Письменное производство. Появление апелляции. Исполнение в натуре.</p>
                     </div>
                 </div>
-
                 <!-- Преторская защита -->
                 <div class="gold-box p-6 mt-8 bg-[#fffcf0]">
                     <h3 class="font-bold text-[#750000] mb-4 flex items-center"><i class="fas fa-shield-alt mr-2"></i>СРЕДСТВА ПРЕТОРСКОЙ ЗАЩИТЫ</h3>
@@ -741,14 +692,12 @@
                     </div>
                 </div>
             </section>
-
             <!-- REGULAE IURIS -->
             <section id="principles">
                 <div class="text-center mb-8 pt-8 border-t-2 border-[#c5a017]">
                     <h2 class="text-3xl font-bold text-[#750000] roman-font">REGULAE IURIS</h2>
                     <p class="text-gray-500 italic">Основные принципы права</p>
-                </div>
-                
+                </div> 
                 <div class="grid md:grid-cols-2 gap-4">
                     <div class="principle-card">
                         <span class="latin-term">Dura lex, sed lex</span>
@@ -776,15 +725,12 @@
                     </div>
                 </div>
             </section>
-
         </div>
-
         <!-- Футер -->
         <footer class="bg-[#1a1a1a] text-[#8b6c42] py-10 text-center border-t-8 border-[#8b6c42] mt-12">
             <div class="container mx-auto px-4">
                 <i class="fas fa-columns text-4xl mb-4 text-[#d4af37]"></i>
                 <p class="font-bold text-xl roman-font mb-2 text-[#d4af37]">DURA LEX SED LEX</p>
-                
                 <div class="border-t border-[#3d3d3d] pt-6 mt-6 max-w-2xl mx-auto">
                     <p class="text-xs text-gray-500 mb-2">На основе учебного пособия: Бортенев А.И., Сергачева О.А., Коваленко Е.Н. (2017)</p>
                     <div class="inline-block border border-[#8b6c42] px-6 py-3 rounded mt-2 bg-[#2b2b2b]">
@@ -795,9 +741,7 @@
                 </div>
             </div>
         </footer>
-
     </main>
-
     <script>
         function toggleAccordion(button) {
             button.classList.toggle('active');
