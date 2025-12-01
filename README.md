@@ -3,17 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Римское Право | В таблицах и схемах</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --imperial-red: #750000; /* Глубокий красный */
+            --imperial-red: #750000;
             --bright-red: #8f1212;
-            --roman-gold: #d4af37; /* Золото */
-            --laurel-green: #3a5f0b; /* Зеленый для венков */
+            --roman-gold: #d4af37;
+            --laurel-green: #3a5f0b;
             --marble-bg: #f9f7f2;
+        } 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         body {
             font-family: 'Noto Serif', serif;
@@ -21,11 +34,9 @@
             color: #2d2d2d;
             font-size: 17px;
             line-height: 1.6;
-            /* Статичный фон Рима */
-            background-image: linear-gradient(rgba(255, 252, 245, 0.94), rgba(255, 252, 245, 0.94)), url('https://upload.wikimedia.org/wikipedia/commons/d/d8/Colosseum_in_Rome-April_2009-1-_copie_2B.jpg');
-            background-size: cover;
+            /* Упрощенный градиентный фон без внешнего изображения */
+            background: linear-gradient(135deg, #e6e2d3 0%, #d4c5a0 50%, #e6e2d3 100%);
             background-attachment: fixed;
-            background-position: center;
         }
         h1, h2, h3, h4, .roman-font {
             font-family: 'Cinzel', serif;
@@ -74,7 +85,7 @@
         }
         .roman-table tr:nth-child(even) td {
             background-color: #faf7f0;
-        }
+        } 
         /* Аккордеон */
         .accordion-btn {
             width: 100%;
@@ -102,9 +113,15 @@
         }
         .accordion-content.open { max-height: 4000px; }
         .icon-rotate { transition: transform 0.3s; }
-        .accordion-btn.active .icon-rotate { transform: rotate(180deg); }
+        .accordion-btn.active .icon-rotate { transform: rotate(180deg); }    
         /* Схемы */
-        .diagram-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 1.5rem 0; }
+        .diagram-container { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 1rem; 
+            margin: 1.5rem 0; 
+        }
         .diagram-node {
             background: white;
             border: 2px solid var(--imperial-red);
@@ -114,7 +131,7 @@
             flex: 1;
             min-width: 200px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+        }  
         /* Принципы */
         .principle-card {
             background: #fff;
@@ -123,13 +140,22 @@
             margin-bottom: 1rem;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .latin-term { font-weight: bold; color: var(--imperial-red); font-size: 1.1rem; display: block; margin-bottom: 0.2rem; }
+        .latin-term { 
+            font-weight: bold; 
+            color: var(--imperial-red); 
+            font-size: 1.1rem; 
+            display: block; 
+            margin-bottom: 0.2rem; 
+        }
         .rus-def { font-style: italic; color: #444; }
         /* Скроллбар */
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #2c2c2c; }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(var(--imperial-red), var(--roman-gold)); border-radius: 5px; }       
-        /* Цитаты (Стиль свитка) */
+        ::-webkit-scrollbar-thumb { 
+            background: linear-gradient(var(--imperial-red), var(--roman-gold)); 
+            border-radius: 5px; 
+        }
+        /* Цитаты */
         .quote-box {
             position: relative;
             background: #fffbf0;
@@ -140,8 +166,7 @@
             max-width: 850px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }    
-        /* Декоративные элементы цитаты */
+        }  
         .quote-box::before, .quote-box::after {
             content: "❖";
             color: var(--imperial-red);
@@ -178,7 +203,7 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
-        /* Стиль для логотипа в сайдбаре */
+        /* Логотип сайдбара */
         .sidebar-logo-container {
             position: relative;
             padding: 2rem 1rem;
@@ -205,13 +230,18 @@
             display: inline-block;
             padding-bottom: 5px;
         }
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            body { font-size: 15px; }
+            .emoji-logo { font-size: 3.5rem; }
+            .sidebar-logo-text { font-size: 1.1rem; }
+        }
     </style>
 </head>
 <body class="flex flex-col md:flex-row min-h-screen">
-    <!-- Сайдбар (Красный с золотом) -->
+    <!-- Сайдбар -->
     <aside class="w-full md:w-72 sidebar-gradient text-[#f3e5ab] flex-shrink-0 flex flex-col shadow-2xl z-50">
         <div class="sidebar-logo-container">
-            <!-- Эмодзи -->
             <div class="emoji-logo">🏛️</div>
             <h1 class="sidebar-logo-text roman-font">IUS ROMANUM</h1>
             <div class="text-[#d4af37] text-xs font-bold mt-1 tracking-widest">S.P.Q.R.</div>
@@ -237,7 +267,6 @@
     <main class="flex-1 overflow-y-auto h-screen scroll-smooth relative">
         <!-- Герой-блок -->
         <header id="intro" class="min-h-[60vh] flex flex-col justify-center items-center p-8 text-center">      
-            <!-- Заголовок с венками (Размер оптимизирован) -->
             <div class="relative mb-6">
                 <i class="fas fa-leaf text-5xl md:text-6xl text-[#3a5f0b] absolute -left-12 md:-left-16 top-1/2 transform -translate-y-1/2 -rotate-45 opacity-90 drop-shadow-md"></i>
                 <i class="fas fa-leaf text-5xl md:text-6xl text-[#3a5f0b] absolute -right-12 md:-right-16 top-1/2 transform -translate-y-1/2 rotate-45 opacity-90 drop-shadow-md"></i>     
@@ -247,8 +276,7 @@
             </div>
             <h2 class="text-lg md:text-xl font-bold uppercase tracking-widest text-[#fff] bg-[#750000] px-6 py-2 rounded shadow-lg border border-[#d4af37] mb-10">
                 Учебный курс в таблицах и схемах
-            </h2>
-            <!-- Цитата (Новый стиль) -->
+            </h2>  
             <div class="quote-box">
                 <p class="quote-latin">
                     Iuris praecepta sunt haec: honeste vivere, alterum non laedere, suum cuique tribuere.
@@ -393,7 +421,6 @@
                     <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">IV</span>
                     <h2 class="text-3xl font-bold text-gray-900 roman-font">ВЕЩНОЕ ПРАВО</h2>
                 </div>
-                <!-- Классификация вещей -->
                 <button class="accordion-btn" onclick="toggleAccordion(this)">
                     <span>СХЕМА: КЛАССИФИКАЦИЯ ВЕЩЕЙ (RES)</span>
                     <i class="fas fa-chevron-down icon-rotate"></i>
@@ -425,13 +452,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- Собственность и Владение -->
                 <div class="grid md:grid-cols-2 gap-8 mb-8">
                     <div class="gold-box p-6">
                         <h3 class="font-bold text-[#750000] mb-2 roman-font">DOMINIUM (Собственность)</h3>
                         <p class="mb-2 text-sm">Полное господство (Plena in re potestas).</p>
                         <ul class="list-decimal list-inside font-bold text-sm text-[#333]">
-                            <li>Ius Utendi (Пользование)</li>
+                        <li>Ius Utendi (Пользование)</li>
                             <li>Ius Fruendi (Плоды)</li>
                             <li>Ius Abutendi (Распоряжение)</li>
                         </ul>
@@ -448,312 +474,315 @@
                     </div>
                 </div>
                 <div class="overflow-x-auto shadow bg-white">
-                    <table class="roman-table">
-                        <tr>
-                            <th colspan="2" class="text-center">ПРАВА НА ЧУЖИЕ ВЕЩИ (IURA IN RE ALIENA)</th>
-                        </tr>
-                        <tr>
-                            <td class="font-bold w-1/4">Сервитуты</td>
-                            <td>
-                                <strong>Предиальные:</strong> Сельские (iter, actus, via, aquaeductus) и Городские.<br>
-                                <strong>Личные:</strong> Ususfructus (узуфрукт - плоды), Usus, Habitatio.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Залог</td>
-                            <td>
-                                <strong>Fiducia</strong> (Собственность), <strong>Pignus</strong> (Владение), <strong>Hypotheca</strong> (Без владения).
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="font-bold">Аренда</td>
-                            <td>Emphyteusis (Вечная аренда земли), Superficies (Право застройки).</td>
-                        </tr>
-                    </table>
+                <table class="roman-table">
+                    <tr>
+                        <th colspan="2" class="text-center">ПРАВА НА ЧУЖИЕ ВЕЩИ (IURA IN RE ALIENA)</th>
+                    </tr>
+                    <tr>
+                        <td class="font-bold w-1/4">Сервитуты</td>
+                        <td>
+                            <strong>Предиальные:</strong> Сельские (iter, actus, via, aquaeductus) и Городские.<br>
+                            <strong>Личные:</strong> Ususfructus (узуфрукт - плоды), Usus, Habitatio.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">Залог</td>
+                        <td>
+                            <strong>Fiducia</strong> (Собственность), <strong>Pignus</strong> (Владение), <strong>Hypotheca</strong> (Без владения).
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold">Аренда</td>
+                        <td>Emphyteusis (Вечная аренда земли), Superficies (Право застройки).</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- ГЛАВА V -->
+        <section id="chap5">
+            <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
+                <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">V</span>
+                <h2 class="text-3xl font-bold text-gray-900 roman-font">ОБЯЗАТЕЛЬСТВЕННОЕ ПРАВО</h2>
+            </div>
+            <div class="quote-box mb-10">
+                <p class="quote-latin">
+                    Obligatio est iuris vinculum, quo necessitate adstringimur alicuius solvendae rei...
+                </p>
+                <p class="quote-rus">
+                    «Обязательство есть правовые узы, в силу которых мы связаны необходимостью что-либо исполнить...»
+                </p>
+                <div class="quote-author">
+                    — Институции Юстиниана (Institutiones Iustiniani), 3.13.pr. —
                 </div>
-            </section>
-            <!-- ГЛАВА V: ОБЯЗАТЕЛЬСТВА -->
-            <section id="chap5">
-                <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
-                    <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">V</span>
-                    <h2 class="text-3xl font-bold text-gray-900 roman-font">ОБЯЗАТЕЛЬСТВЕННОЕ ПРАВО</h2>
-                </div>
-                <!-- Цитата -->
-                <div class="quote-box mb-10">
-                    <p class="quote-latin">
-                        Obligatio est iuris vinculum, quo necessitate adstringimur alicuius solvendae rei...
-                    </p>
-                    <p class="quote-rus">
-                        «Обязательство есть правовые узы, в силу которых мы связаны необходимостью что-либо исполнить...»
-                    </p>
-                    <div class="quote-author">
-                        — Институции Юстиниана (Institutiones Iustiniani), 3.13.pr. —
-                    </div>
-                </div>
-                <!-- 1. КОНТРАКТЫ -->
-                <button class="accordion-btn active" onclick="toggleAccordion(this)">
-                    <span>1. СИСТЕМА КОНТРАКТОВ (Contractus)</span>
-                    <i class="fas fa-chevron-down icon-rotate"></i>
-                </button>
-                <div class="accordion-content open mb-4">
-                    <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="border p-4 rounded bg-red-50/30">
-                            <h4 class="font-bold text-[#750000] mb-2">RE (Реальные)</h4>
-                            <p class="text-xs mb-2">Возникают с передачи вещи.</p>
-                            <ul class="text-sm space-y-1 list-disc list-inside">
-                                <li><strong>Mutuum (Заем):</strong> Переход собственности (деньги). Возврат того же количества.</li>
-                                <li><strong>Commodatum (Ссуда):</strong> Временное пользование. Возврат той же вещи.</li>
-                                <li><strong>Depositum (Хранение):</strong> Безвозмездно.</li>
-                                <li><strong>Pignus (Залог).</strong></li>
-                            </ul>
-                        </div>
-                        <div class="border p-4 rounded bg-yellow-50/30">
-                            <h4 class="font-bold text-[#750000] mb-2">VERBIS & LITTERIS</h4>
-                            <ul class="text-sm space-y-1 list-disc list-inside">
-                                <li><strong>Stipulatio:</strong> Устный контракт ("Spondesne? - Spondeo").</li>
-                                <li><strong>Litteris:</strong> Письменный контракт (запись в книгу).</li>
-                            </ul>
-                        </div>
-                        <div class="border p-4 rounded bg-green-50/30 col-span-1 md:col-span-2">
-                            <h4 class="font-bold text-[#750000] mb-2">CONSENSU (Консенсуальные)</h4>
-                            <p class="text-xs mb-2">Возникают из простого соглашения (Consensus).</p>
-                            <div class="grid grid-cols-2 gap-4 text-sm">
-                                <div><strong>1. Emptio-Venditio:</strong> Купля-продажа.</div>
-                                <div><strong>2. Locatio-Conductio:</strong> Наем вещей, услуг, работ.</div>
-                                <div><strong>3. Mandatum:</strong> Поручение.</div>
-                                <div><strong>4. Societas:</strong> Товарищество.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 2. ДЕЛИКТЫ -->
-                <button class="accordion-btn" onclick="toggleAccordion(this)">
-                    <span>2. ДЕЛИКТЫ (Delicta Privata)</span>
-                    <i class="fas fa-chevron-down icon-rotate"></i>
-                </button>
-                <div class="accordion-content mb-4">
-                    <div class="p-6">
-                        <table class="roman-table">
-                            <tr>
-                                <td class="font-bold">Furtum (Кража)</td>
-                                <td>Тайное хищение. Штраф: двойной (nec manifestum) или четверной (manifestum).</td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold">Iniuria (Обида)</td>
-                                <td>Посягательство на личность (телесные повреждения, оскорбление). Штраф по оценке.</td>
-                            </tr>
-                            <tr>
-                                <td class="font-bold">Damnum Iniuria Datum</td>
-                                <td>Повреждение имущества. <strong>Lex Aquilia</strong>: за убийство раба — высшая цена за год.</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <!-- 3. КВАЗИ И ПАКТЫ -->
-                <button class="accordion-btn" onclick="toggleAccordion(this)">
-                    <span>3. ПАКТЫ И КВАЗИ-ОБЯЗАТЕЛЬСТВА</span>
-                    <i class="fas fa-chevron-down icon-rotate"></i>
-                </button>
-                <div class="accordion-content mb-4">
-                    <div class="p-6">
-                        <ul class="list-disc list-inside text-sm space-y-2">
-                            <li><strong>Negotiorum gestio:</strong> Ведение чужих дел без поручения.</li>
-                            <li><strong>Solutio indebiti:</strong> Исполнение недолжного (ошибочный платеж).</li>
-                            <li><strong>Pacta:</strong> "Голые" пакты (без иска) и "Одетые" (с иском).</li>
+            </div>
+            <button class="accordion-btn active" onclick="toggleAccordion(this)">
+                <span>1. СИСТЕМА КОНТРАКТОВ (Contractus)</span>
+                <i class="fas fa-chevron-down icon-rotate"></i>
+            </button>
+            <div class="accordion-content open mb-4">
+                <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border p-4 rounded bg-red-50/30">
+                        <h4 class="font-bold text-[#750000] mb-2">RE (Реальные)</h4>
+                        <p class="text-xs mb-2">Возникают с передачи вещи.</p>
+                        <ul class="text-sm space-y-1 list-disc list-inside">
+                            <li><strong>Mutuum (Заем):</strong> Переход собственности (деньги). Возврат того же количества.</li>
+                            <li><strong>Commodatum (Ссуда):</strong> Временное пользование. Возврат той же вещи.</li>
+                            <li><strong>Depositum (Хранение):</strong> Безвозмездно.</li>
+                            <li><strong>Pignus (Залог).</strong></li>
                         </ul>
                     </div>
-                </div>
-            </section>
-            <!-- ГЛАВА VI: НАСЛЕДСТВО -->
-            <section id="chap6">
-                <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
-                    <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">VI</span>
-                    <h2 class="text-3xl font-bold text-gray-900 roman-font">НАСЛЕДСТВЕННОЕ ПРАВО</h2>
-                </div>
-                <div class="gold-box p-6 mb-8">
-                    <h3 class="text-center font-bold text-lg mb-4 text-[#750000]">ЭВОЛЮЦИЯ ОЧЕРЕДЕЙ НАСЛЕДОВАНИЯ ПО ЗАКОНУ</h3>
-                    <div class="grid md:grid-cols-3 gap-4 text-sm">
-                        <div class="bg-gray-100 p-4">
-                            <strong class="block text-center mb-2">ЦИВИЛЬНОЕ (XII Таблиц)</strong>
-                            <p class="text-xs text-center mb-2">Принцип: Агнатство</p>
-                            <ol class="list-decimal list-inside">
-                                <li>Sui Heredes (Свои)</li>
-                                <li>Agnatus Proximus</li>
-                                <li>Gentiles (Родичи)</li>
-                            </ol>
-                        </div>
-                        <div class="bg-yellow-50 p-4 border border-[#d4af37]">
-                            <strong class="block text-center mb-2 text-[#750000]">ПРЕТОРСКОЕ</strong>
-                            <p class="text-xs text-center mb-2">Принцип: Смешанный</p>
-                            <ol class="list-decimal list-inside">
-                                <li>Unde Liberi (Дети)</li>
-                                <li>Unde Legitimi</li>
-                                <li>Unde Cognati</li>
-                                <li>Unde Vir et Uxor</li>
-                            </ol>
-                        </div>
-                        <div class="bg-red-50 p-4 border border-[#750000]">
-                            <strong class="block text-center mb-2 text-[#750000]">ЮСТИНИАНА</strong>
-                            <p class="text-xs text-center mb-2">Принцип: Кровь</p>
-                            <ol class="list-decimal list-inside">
-                                <li>Нисходящие</li>
-                                <li>Восходящие + Братья</li>
-                                <li>Неполнородные</li>
-                                <li>Прочие когнаты</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white p-6 shadow-md border-l-4 border-[#750000]">
-                    <h4 class="font-bold text-[#750000] mb-2">Сингулярное преемство (Отказы)</h4>
-                    <div class="grid md:grid-cols-2 gap-6 text-sm">
-                        <div>
-                            <strong>Legatum (Легат):</strong> Строго формальный дар, возлагаемый на наследника <em>в завещании</em>.
-                        </div>
-                        <div>
-                            <strong>Fideicommissum (Фидеикомисс):</strong> Неформальная просьба к "совести" наследника.
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- ГЛАВА VII: ПРОЦЕСС -->
-            <section id="chap7">
-                <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
-                    <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">VII</span>
-                    <h2 class="text-3xl font-bold text-gray-900 roman-font">ГРАЖДАНСКИЙ ПРОЦЕСС</h2>
-                </div>
-                <!-- Легисакционный -->
-                <button class="accordion-btn" onclick="toggleAccordion(this)">
-                    <span>1. ЛЕГИСАКЦИОННЫЙ ПРОЦЕСС (Legis Actiones)</span>
-                    <i class="fas fa-chevron-down icon-rotate"></i>
-                </button>
-                <div class="accordion-content mb-4">
-                    <div class="p-6">
-                        <p class="mb-4 text-sm italic">Строгий формализм. Две стадии: In Iure и Apud Iudicem. 5 видов исков (Гай):</p>
-                        <ul class="list-decimal list-inside text-sm space-y-1">
-                            <li><strong>Sacramentum:</strong> Процесс-пари с залогом.</li>
-                            <li><strong>Per iudicis postulationem:</strong> Просьба о судье (раздел).</li>
-                            <li><strong>Per condictionem:</strong> Кондикция (для точных сумм).</li>
-                            <li><strong>Per manus iniectionem:</strong> Наложение руки (исполнительный).</li>
-                            <li><strong>Per pignoris capionem:</strong> Захват залога (внесудебный).</li>
+                    <div class="border p-4 rounded bg-yellow-50/30">
+                        <h4 class="font-bold text-[#750000] mb-2">VERBIS & LITTERIS</h4>
+                        <ul class="text-sm space-y-1 list-disc list-inside">
+                            <li><strong>Stipulatio:</strong> Устный контракт ("Spondesne? - Spondeo").</li>
+                            <li><strong>Litteris:</strong> Письменный контракт (запись в книгу).</li>
                         </ul>
                     </div>
-                </div>
-                <!-- Формулярный -->
-                <button class="accordion-btn active" onclick="toggleAccordion(this)">
-                    <span>2. ФОРМУЛЯРНЫЙ ПРОЦЕСС (Per Formulas)</span>
-                    <i class="fas fa-chevron-down icon-rotate"></i>
-                </button>
-                <div class="accordion-content open mb-4">
-                    <div class="p-6">
-                        <p class="mb-4">Претор составляет письменную <strong>Формулу</strong> — инструкцию для судьи.</p>
-                        <div class="bg-gray-100 p-4 border border-gray-300 mb-4">
-                            <h5 class="font-bold text-center text-[#750000] mb-2">ЧАСТИ ФОРМУЛЫ</h5>
-                            <ul class="text-sm grid grid-cols-1 md:grid-cols-2 gap-2">
-                                <li><strong>Intentio:</strong> Требование истца (основа).</li>
-                                <li><strong>Demonstratio:</strong> Описание фактов.</li>
-                                <li><strong>Condemnatio:</strong> Приказ осудить (денежная!).</li>
-                                <li><strong>Adiudicatio:</strong> Присуждение (при разделе).</li>
-                                <li class="col-span-1 md:col-span-2 border-t pt-2"><em>Exceptio</em> (Возражение) и <em>Praescriptio</em>.</li>
-                            </ul>
+                    <div class="border p-4 rounded bg-green-50/30 col-span-1 md:col-span-2">
+                        <h4 class="font-bold text-[#750000] mb-2">CONSENSU (Консенсуальные)</h4>
+                        <p class="text-xs mb-2">Возникают из простого соглашения (Consensus).</p>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div><strong>1. Emptio-Venditio:</strong> Купля-продажа.</div>
+                            <div><strong>2. Locatio-Conductio:</strong> Наем вещей, услуг, работ.</div>
+                            <div><strong>3. Mandatum:</strong> Поручение.</div>
+                            <div><strong>4. Societas:</strong> Товарищество.</div>
                         </div>
-                    </div>
-                </div>
-                <!-- Экстраординарный -->
-                <button class="accordion-btn" onclick="toggleAccordion(this)">
-                    <span>3. ЭКСТРАОРДИНАРНЫЙ (Cognitio Extra Ordinem)</span>
-                    <i class="fas fa-chevron-down icon-rotate"></i>
-                </button>
-                <div class="accordion-content mb-4">
-                    <div class="p-6">
-                        <p>Государственный процесс. Одна стадия. Судья — чиновник. Письменное производство. Появление апелляции. Исполнение в натуре.</p>
-                    </div>
-                </div>
-                <!-- Преторская защита -->
-                <div class="gold-box p-6 mt-8 bg-[#fffcf0]">
-                    <h3 class="font-bold text-[#750000] mb-4 flex items-center"><i class="fas fa-shield-alt mr-2"></i>СРЕДСТВА ПРЕТОРСКОЙ ЗАЩИТЫ</h3>
-                    <div class="grid md:grid-cols-2 gap-6 text-sm">
-                        <div>
-                            <span class="block font-bold">1. Interdictum (Интердикт)</span>
-                            <span class="text-gray-700">Приказ претора о запрете или совершении действия.</span>
-                        </div>
-                        <div>
-                            <span class="block font-bold">2. Restitutio in integrum</span>
-                            <span class="text-gray-700">Восстановление в первоначальное состояние.</span>
-                        </div>
-                        <div>
-                            <span class="block font-bold">3. Stipulatio praetoria</span>
-                            <span class="text-gray-700">Обещание по приказу претора.</span>
-                        </div>
-                        <div>
-                            <span class="block font-bold">4. Missio in possessionem</span>
-                            <span class="text-gray-700">Ввод во владение имуществом должника.</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- REGULAE IURIS -->
-            <section id="principles">
-                <div class="text-center mb-8 pt-8 border-t-2 border-[#c5a017]">
-                    <h2 class="text-3xl font-bold text-[#750000] roman-font">REGULAE IURIS</h2>
-                    <p class="text-gray-500 italic">Основные принципы права</p>
-                </div>            
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div class="principle-card">
-                        <span class="latin-term">Dura lex, sed lex</span>
-                        <span class="rus-def">Закон суров, но это закон.</span>
-                    </div>
-                    <div class="principle-card">
-                        <span class="latin-term">Nemo iudex in propria causa</span>
-                        <span class="rus-def">Никто не может быть судьей в собственном деле.</span>
-                    </div>
-                    <div class="principle-card">
-                        <span class="latin-term">Pacta sunt servanda</span>
-                        <span class="rus-def">Договоры должны соблюдаться.</span>
-                    </div>
-                    <div class="principle-card">
-                        <span class="latin-term">Ei incumbit probatio qui dicit</span>
-                        <span class="rus-def">Доказывание лежит на том, кто утверждает, а не на том, кто отрицает.</span>
-                    </div>
-                    <div class="principle-card">
-                        <span class="latin-term">Audiatur et altera pars</span>
-                        <span class="rus-def">Пусть будет выслушана и другая сторона.</span>
-                    </div>
-                    <div class="principle-card">
-                        <span class="latin-term">Superficies solo cedit</span>
-                        <span class="rus-def">Строение следует за землей (принадлежит собственнику земли).</span>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!-- Футер -->
-        <footer class="bg-[#1a1a1a] text-[#8b6c42] py-10 text-center border-t-8 border-[#8b6c42] mt-12">
-            <div class="container mx-auto px-4">
-                <i class="fas fa-columns text-4xl mb-4 text-[#d4af37]"></i>
-                <p class="font-bold text-xl roman-font mb-2 text-[#d4af37]">DURA LEX SED LEX</p>      
-                <div class="border-t border-[#3d3d3d] pt-6 mt-6 max-w-2xl mx-auto">
-                    <p class="text-xs text-gray-500 mb-2">На основе учебного пособия: Бортенев А.И., Сергачева О.А., Коваленко Е.Н. (2017)</p>
-                    <div class="inline-block border border-[#8b6c42] px-6 py-3 rounded mt-2 bg-[#2b2b2b]">
-                        <p class="text-xs uppercase tracking-widest text-[#d4af37] font-bold mb-1">Разработал</p>
-                        <p class="text-white font-serif text-lg">Мазанов Тимофей Олегович</p>
-                        <p class="text-xs text-gray-400 mt-1">1 курс юрфака, группа 4201-25-02 • 2025</p>
                     </div>
                 </div>
             </div>
-        </footer>
-    </main>
-    <script>
-        function toggleAccordion(button) {
-            button.classList.toggle('active');
-            var content = button.nextElementSibling;
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                content.classList.remove('open');
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                content.classList.add('open');
-            }
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <span>2. ДЕЛИКТЫ (Delicta Privata)</span>
+                <i class="fas fa-chevron-down icon-rotate"></i>
+            </button>
+            <div class="accordion-content mb-4">
+                <div class="p-6">
+                    <table class="roman-table">
+                        <tr>
+                            <td class="font-bold">Furtum (Кража)</td>
+                            <td>Тайное хищение. Штраф: двойной (nec manifestum) или четверной (manifestum).</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Iniuria (Обида)</td>
+                            <td>Посягательство на личность (телесные повреждения, оскорбление). Штраф по оценке.</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">Damnum Iniuria Datum</td>
+                            <td>Повреждение имущества. <strong>Lex Aquilia</strong>: за убийство раба — высшая цена за год.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <span>3. ПАКТЫ И КВАЗИ-ОБЯЗАТЕЛЬСТВА</span>
+                <i class="fas fa-chevron-down icon-rotate"></i>
+            </button>
+            <div class="accordion-content mb-4">
+                <div class="p-6">
+                    <ul class="list-disc list-inside text-sm space-y-2">
+                        <li><strong>Negotiorum gestio:</strong> Ведение чужих дел без поручения.</li>
+                        <li><strong>Solutio indebiti:</strong> Исполнение недолжного (ошибочный платеж).</li>
+                        <li><strong>Pacta:</strong> "Голые" пакты (без иска) и "Одетые" (с иском).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- ГЛАВА VI -->
+        <section id="chap6">
+            <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
+                <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">VI</span>
+                <h2 class="text-3xl font-bold text-gray-900 roman-font">НАСЛЕДСТВЕННОЕ ПРАВО</h2>
+            </div>
+            <div class="gold-box p-6 mb-8">
+                <h3 class="text-center font-bold text-lg mb-4 text-[#750000]">ЭВОЛЮЦИЯ ОЧЕРЕДЕЙ НАСЛЕДОВАНИЯ ПО ЗАКОНУ</h3>
+                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-gray-100 p-4">
+                        <strong class="block text-center mb-2">ЦИВИЛЬНОЕ (XII Таблиц)</strong>
+                        <p class="text-xs text-center mb-2">Принцип: Агнатство</p>
+                        <ol class="list-decimal list-inside">
+                            <li>Sui Heredes (Свои)</li>
+                            <li>Agnatus Proximus</li>
+                            <li>Gentiles (Родичи)</li>
+                        </ol>
+                    </div>
+                    <div class="bg-yellow-50 p-4 border border-[#d4af37]">
+                        <strong class="block text-center mb-2 text-[#750000]">ПРЕТОРСКОЕ</strong>
+                        <p class="text-xs text-center mb-2">Принцип: Смешанный</p>
+                        <ol class="list-decimal list-inside">
+                            <li>Unde Liberi (Дети)</li>
+                            <li>Unde Legitimi</li>
+                            <li>Unde Cognati</li>
+                            <li>Unde Vir et Uxor</li>
+                        </ol>
+                    </div>
+                    <div class="bg-red-50 p-4 border border-[#750000]">
+                        <strong class="block text-center mb-2 text-[#750000]">ЮСТИНИАНА</strong>
+                        <p class="text-xs text-center mb-2">Принцип: Кровь</p>
+                        <ol class="list-decimal list-inside">
+                            <li>Нисходящие</li>
+                            <li>Восходящие + Братья</li>
+                            <li>Неполнородные</li>
+                            <li>Прочие когнаты</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-6 shadow-md border-l-4 border-[#750000]">
+                <h4 class="font-bold text-[#750000] mb-2">Сингулярное преемство (Отказы)</h4>
+                <div class="grid md:grid-cols-2 gap-6 text-sm">
+                    <div>
+                        <strong>Legatum (Легат):</strong> Строго формальный дар, возлагаемый на наследника <em>в завещании</em>.
+                    </div>
+                    <div>
+                        <strong>Fideicommissum (Фидеикомисс):</strong> Неформальная просьба к "совести" наследника.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ГЛАВА VII -->
+        <section id="chap7">
+            <div class="flex items-center mb-6 border-b-4 border-[#750000] pb-2">
+                <span class="text-5xl text-[#750000] font-bold mr-4 roman-font">VII</span>
+                <h2 class="text-3xl font-bold text-gray-900 roman-font">ГРАЖДАНСКИЙ ПРОЦЕСС</h2>
+            </div>
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <span>1. ЛЕГИСАКЦИОННЫЙ ПРОЦЕСС (Legis Actiones)</span>
+                <i class="fas fa-chevron-down icon-rotate"></i>
+            </button>
+            <div class="accordion-content mb-4">
+                <div class="p-6">
+                    <p class="mb-4 text-sm italic">Строгий формализм. Две стадии: In Iure и Apud Iudicem. 5 видов исков (Гай):</p>
+                    <ul class="list-decimal list-inside text-sm space-y-1">
+                        <li><strong>Sacramentum:</strong> Процесс-пари с залогом.</li>
+                        <li><strong>Per iudicis postulationem:</strong> Просьба о судье (раздел).</li>
+                        <li><strong>Per condictionem:</strong> Кондикция (для точных сумм).</li>
+                        <li><strong>Per manus iniectionem:</strong> Наложение руки (исполнительный).</li>
+                        <li><strong>Per pignoris capionem:</strong> Захват залога (внесудебный).</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="accordion-btn active" onclick="toggleAccordion(this)">
+                <span>2. ФОРМУЛЯРНЫЙ ПРОЦЕСС (Per Formulas)</span>
+                <i class="fas fa-chevron-down icon-rotate"></i>
+            </button>
+            <div class="accordion-content open mb-4">
+                <div class="p-6">
+                    <p class="mb-4">Претор составляет письменную <strong>Формулу</strong> — инструкцию для судьи.</p>
+                    <div class="bg-gray-100 p-4 border border-gray-300 mb-4">
+                        <h5 class="font-bold text-center text-[#750000] mb-2">ЧАСТИ ФОРМУЛЫ</h5>
+                        <ul class="text-sm grid grid-cols-1 md:grid-cols-2 gap-2">
+                            <li><strong>Intentio:</strong> Требование истца (основа).</li>
+                            <li><strong>Demonstratio:</strong> Описание фактов.</li>
+                            <li><strong>Condemnatio:</strong> Приказ осудить (денежная!).</li>
+                            <li><strong>Adiudicatio:</strong> Присуждение (при разделе).</li>
+                            <li class="col-span-1 md:col-span-2 border-t pt-2"><em>Exceptio</em> (Возражение) и <em>Praescriptio</em>.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <span>3. ЭКСТРАОРДИНАРНЫЙ (Cognitio Extra Ordinem)</span>
+                <i class="fas fa-chevron-down icon-rotate"></i>
+            </button>
+            <div class="accordion-content mb-4">
+                <div class="p-6">
+                    <p>Государственный процесс. Одна стадия. Судья — чиновник. Письменное производство. Появление апелляции. Исполнение в натуре.</p>
+                </div>
+            </div>
+            <div class="gold-box p-6 mt-8 bg-[#fffcf0]">
+                <h3 class="font-bold text-[#750000] mb-4 flex items-center"><i class="fas fa-shield-alt mr-2"></i>СРЕДСТВА ПРЕТОРСКОЙ ЗАЩИТЫ</h3>
+                <div class="grid md:grid-cols-2 gap-6 text-sm">
+                    <div>
+                        <span class="block font-bold">1. Interdictum (Интердикт)</span>
+                        <span class="text-gray-700">Приказ претора о запрете или совершении действия.</span>
+                    </div>
+                    <div>
+                        <span class="block font-bold">2. Restitutio in integrum</span>
+                        <span class="text-gray-700">Восстановление в первоначальное состояние.</span>
+                    </div>
+                    <div>
+                        <span class="block font-bold">3. Stipulatio praetoria</span>
+                        <span class="text-gray-700">Обещание по приказу претора.</span>
+                    </div>
+                    <div>
+                        <span class="block font-bold">4. Missio in possessionem</span>
+                        <span class="text-gray-700">Ввод во владение имуществом должника.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- REGULAE IURIS -->
+        <section id="principles">
+            <div class="text-center mb-8 pt-8 border-t-2 border-[#c5a017]">
+                <h2 class="text-3xl font-bold text-[#750000] roman-font">REGULAE IURIS</h2>
+                <p class="text-gray-500 italic">Основные принципы права</p>
+            </div>            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="principle-card">
+                    <span class="latin-term">Dura lex, sed lex</span>
+                    <span class="rus-def">Закон суров, но это закон.</span>
+                </div>
+                <div class="principle-card">
+                    <span class="latin-term">Nemo iudex in propria causa</span>
+                    <span class="rus-def">Никто не может быть судьей в собственном деле.</span>
+                </div>
+                <div class="principle-card">
+                    <span class="latin-term">Pacta sunt servanda</span>
+                    <span class="rus-def">Договоры должны соблюдаться.</span>
+                </div>
+                <div class="principle-card">
+                    <span class="latin-term">Ei incumbit probatio qui dicit</span>
+                    <span class="rus-def">Доказывание лежит на том, кто утверждает, а не на том, кто отрицает.</span>
+                </div>
+                <div class="principle-card">
+                    <span class="latin-term">Audiatur et altera pars</span>
+                    <span class="rus-def">Пусть будет выслушана и другая сторона.</span>
+                </div>
+                <div class="principle-card">
+                    <span class="latin-term">Superficies solo cedit</span>
+                    <span class="rus-def">Строение следует за землей (принадлежит собственнику земли).</span>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Футер -->
+    <footer class="bg-[#1a1a1a] text-[#8b6c42] py-10 text-center border-t-8 border-[#8b6c42] mt-12">
+        <div class="container mx-auto px-4">
+            <i class="fas fa-columns text-4xl mb-4 text-[#d4af37]"></i>
+            <p class="font-bold text-xl roman-font mb-2 text-[#d4af37]">DURA LEX SED LEX</p>      
+            <div class="border-t border-[#3d3d3d] pt-6 mt-6 max-w-2xl mx-auto">
+                <p class="text-xs text-gray-500 mb-2">На основе учебного пособия: Бортенев А.И., Сергачева О.А., Коваленко Е.Н. (2017)</p>
+                <div class="inline-block border border-[#8b6c42] px-6 py-3 rounded mt-2 bg-[#2b2b2b]">
+                    <p class="text-xs uppercase tracking-widest text-[#d4af37] font-bold mb-1">Разработал</p>
+                    <p class="text-white font-serif text-lg">Мазанов Тимофей Олегович</p>
+                    <p class="text-xs text-gray-400 mt-1">1 курс юрфака, группа 4201-25-02 • 2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+<script>
+    function toggleAccordion(button) {
+        button.classList.toggle('active');
+        var content = button.nextElementSibling;
+        if (content.classList.contains('open')) {
+            content.style.maxHeight = null;
+            content.classList.remove('open');
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.classList.add('open');
         }
-    </script>
-</body>
-</html>
+    }
+    // Плавная прокрутка для якорных ссылок
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
